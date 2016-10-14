@@ -11,3 +11,4 @@ buildNumber.properties
 
 build/
 dist/
+private/

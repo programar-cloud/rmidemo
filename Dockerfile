@@ -15,6 +15,8 @@ ENV CLASSPATH=$CLASSPATH:$INTERFACES_CLASSPATH:$ALICE_CLASSPATH:$BOB_CLASSPATH
 COPY Alice/src/ $ALICE/src/ 
 COPY Bob/src/ $BOB/Bob/src/ 
 COPY interfaces/src/ $INTERFACES/src/ 
+ADD Alice/start.sh /startAlice.sh 
+ADD Bob/start.sh /startBob.sh 
  
 RUN mkdir -p $INTERFACES_CLASSPATH && \ 
     find -path "*$INTERFACES*" -name "*.java" | xargs javac -d $INTERFACES_CLASSPATH && \ 
